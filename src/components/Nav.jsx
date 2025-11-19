@@ -14,9 +14,9 @@ const Nav = () => {
         <Link to="/discover" className="hover:text-blue-700">
           Discover
         </Link>
-        <a href="#" className="hover:text-blue-700">
-          Activities
-        </a>
+        <Link to="/favorites" className="hover:text-blue-700">
+          Favorites
+        </Link>
         <a href="#" className="hover:text-blue-700">
           About
         </a>

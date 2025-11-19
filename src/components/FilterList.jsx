@@ -12,7 +12,7 @@ const FilterList = ({ title, data, onFilterChange }) => {
             onChange={(e) => onFilterChange(d.id, e.target.checked)}
           />
           <label
-            for={d.id}
+            htmlFor={d.id}
             className="flex-1 flex justify-between items-center cursor-pointer"
           >
             {d.name}

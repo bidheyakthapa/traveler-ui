@@ -34,7 +34,7 @@ const data = [
 
 const Footer = () => {
   return (
-    <div className="mt-8 flex justify-between">
+    <div className="mt-8 flex justify-between  bottom-0">
       <div>
         <div className="flex items-center font-semibold text-lg">
           <BiSolidPlaneAlt className="text-blue-500" />

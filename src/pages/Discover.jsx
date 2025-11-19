@@ -6,6 +6,8 @@ import ItemCard from "../components/ItemCard";
 import FilterList from "../components/FilterList";
 import RatingFilter from "../components/RatingFilter";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import usePropertyDetails from "../store";
 
 const popularFilterList = [
   { id: "free-cancellation", name: "Free cancellation", matches: "100" },
@@ -35,6 +37,9 @@ const Discover = () => {
     activity: [],
     rating: null,
   });
+  const navigate = useNavigate();
+
+  const setProperty = usePropertyDetails((store) => store.setPropertyDetails);
 
   const handleFilterChange = (category, filterId, isChecked) => {
     setSelectedFilters((prev) => {
@@ -50,6 +55,11 @@ const Discover = () => {
       }
       return newFilters;
     });
+  };
+
+  const onBtnClick = (data) => {
+    navigate(`/property/${data.id}`);
+    setProperty(data);
   };
 
   const filteredProperties = propertyData.filter((property) => {
@@ -113,7 +123,9 @@ const Discover = () => {
         </div>
         <div>
           {filteredProperties.length > 0 ? (
-            filteredProperties.map((d) => <ItemCard key={d.id} data={d} />)
+            filteredProperties.map((d) => (
+              <ItemCard key={d.id} data={d} onBtnClick={onBtnClick} />
+            ))
           ) : (
             <p>No results found</p>
           )}

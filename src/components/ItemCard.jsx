@@ -1,6 +1,6 @@
 import { FaStar } from "react-icons/fa";
 
-const ItemCard = ({ data }) => {
+const ItemCard = ({ data, onBtnClick }) => {
   const {
     image,
     name,
@@ -47,7 +47,10 @@ const ItemCard = ({ data }) => {
             </div>
             <p className="font-medium mt-4 truncate">{description}</p>
             <p className="my-2 text-sm text-gray-600 line-clamp-2">{details}</p>
-            <button className="py-2 px-4 bg-blue-500 text-white font-semibold rounded mt-2 cursor-pointer hover:bg-blue-600 transition-colors">
+            <button
+              onClick={() => onBtnClick(data)}
+              className="py-2 px-4 bg-blue-500 text-white font-semibold rounded mt-2 cursor-pointer hover:bg-blue-600 transition-colors"
+            >
               See availability
             </button>
           </div>

@@ -7,7 +7,7 @@ const Links = ({ data }) => {
       <ul>
         {data.links.map((l) => (
           <li>
-            <Link to className="text-gray-700" key={l.path}>
+            <Link to="/" className="text-gray-700" key={l.path}>
               {l.label}
             </Link>
           </li>

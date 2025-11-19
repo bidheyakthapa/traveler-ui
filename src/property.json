@@ -17,7 +17,9 @@
     "includesTax": true,
     "popularFilters": ["free-cancellation", "no-prepayment"],
     "budgetRange": "0-200",
-    "activities": ["beach", "sauna"]
+    "activities": ["beach", "sauna"],
+    "overview": "Nestled by the serene shores of a beautiful lake, Lakeside Motel Warefront offers the perfect blend of relaxation and luxury for anyone looking to escape the hustle and bustle of daily life. With stunning water views, cozy accommodations, and thoughtful amenities like a fitness center and champagne upon arrival, it’s a peaceful retreat where you can unwind and reconnect with nature. Whether you’re here for a romantic getaway or a solo retreat, this lakeside motel promises an unforgettable experience.",
+    "location": "Lakeview, Australia"
   },
   {
     "id": 2,
@@ -37,7 +39,9 @@
     "includesTax": true,
     "popularFilters": ["spa"],
     "budgetRange": "200-500",
-    "activities": ["hiking", "fishing"]
+    "activities": ["hiking", "fishing"],
+    "overview": "Located in the vibrant Shibuya district, the Tokyo Urban Retreat offers the perfect combination of luxury and convenience. This chic property places you right in the heart of one of the world's most exciting cities, with easy access to shopping, dining, and cultural experiences. The modern amenities and sleek design of the hotel make it a top choice for those seeking both comfort and style while exploring Tokyo’s bustling streets.",
+    "location": "Shibuya, Tokyo, Japan"
   },
   {
     "id": 3,
@@ -57,7 +61,9 @@
     "includesTax": false,
     "popularFilters": ["free-cancellation"],
     "budgetRange": "200-500",
-    "activities": ["hiking", "fishing"]
+    "activities": ["hiking", "fishing"],
+    "overview": "Escape to the serene beauty of the Mountain View Lodge, where breathtaking views of snow-capped peaks and lush valleys provide the perfect backdrop for relaxation. This cozy lodge offers guests a chance to unplug and reconnect with nature, whether it's hiking along the scenic trails or simply enjoying the warmth of the fire in the lobby. Ideal for adventurers and those seeking a peaceful retreat, the lodge welcomes pets, making it an excellent choice for a family getaway.",
+    "location": "Alps Region, Switzerland"
   },
   {
     "id": 4,
@@ -77,7 +83,9 @@
     "includesTax": true,
     "popularFilters": ["spa", "beach"],
     "budgetRange": "500-1000",
-    "activities": ["beach", "fishing"]
+    "activities": ["beach", "fishing"],
+    "overview": "The Beach Paradise Resort offers the ultimate all-inclusive beachfront experience, where you can indulge in luxurious amenities while enjoying stunning ocean views. From water sports to delicious gourmet meals and a vibrant kids club, this resort has something for everyone. Whether you're lounging by the pool, exploring the beach, or enjoying a day of adventure, your stay here promises relaxation and fun in equal measure.",
+    "location": "Gold Coast, Australia"
   },
   {
     "id": 5,
@@ -97,7 +105,9 @@
     "includesTax": false,
     "popularFilters": ["no-prepayment"],
     "budgetRange": "0-200",
-    "activities": []
+    "activities": [],
+    "overview": "The Urban Loft Downtown is a stylish and spacious city escape offering modern living with the convenience of home. Located in the heart of downtown Tokyo, this pet-friendly loft is perfect for those who want to explore the vibrant city while enjoying a private, fully equipped space. With a full kitchen, washer/dryer, and parking included, it’s ideal for both short-term stays and longer trips. The loft’s design reflects the urban sophistication of the surrounding neighborhood, with plenty of natural light and city views.",
+    "location": "Downtown, Tokyo, Japan"
   },
   {
     "id": 6,
@@ -117,6 +127,8 @@
     "includesTax": true,
     "popularFilters": ["spa", "free-cancellation"],
     "budgetRange": "1000-2000",
-    "activities": ["sauna", "hiking"]
+    "activities": ["sauna", "hiking"],
+    "overview": "Experience the ultimate wellness escape at the Luxury Spa Retreat, nestled in the tranquil Bavarian Alps. This serene resort offers a rejuvenating combination of spa treatments, yoga classes, and organic meals designed to revitalize both body and mind. Whether you’re unwinding in the sauna, indulging in a massage, or taking in the breathtaking mountain views, every moment here is crafted to leave you feeling refreshed and relaxed.",
+    "location": "Bavarian Alps, Germany"
   }
 ]
