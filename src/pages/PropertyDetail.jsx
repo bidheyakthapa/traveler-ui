@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -5,21 +6,40 @@ import Note from "../components/Note";
 import { CiLocationOn } from "react-icons/ci";
 import usePropertyDetails from "../store";
 import useFavoritesStore from "../favStore";
+import Toast from "../components/Toast";
 
 const PropertyDetail = () => {
   const property = usePropertyDetails((store) => store.propertyDetails);
   const { setFavorites, removeFavorites, isFavorited } = useFavoritesStore();
 
-  const isPropertyFavorited = isFavorited(property.id);
+  const [toast, setToast] = useState({ show: false, message: "", status: "" });
 
-  const { name, rating, reviewCount, location, overview } = property;
+  const isPropertyFavorited = property ? isFavorited(property.id) : false;
+
+  const { name, rating, reviewCount, location, overview } = property || {};
 
   const handleFavoriteToggle = () => {
-    if (isPropertyFavorited) {
-      removeFavorites(property.id);
-    } else {
-      setFavorites(property);
+    if (property) {
+      if (isPropertyFavorited) {
+        removeFavorites(property.id);
+        setToast({
+          show: true,
+          message: "Removed from favorites",
+          status: "success",
+        });
+      } else {
+        setFavorites(property);
+        setToast({
+          show: true,
+          message: "Added to favorites",
+          status: "success",
+        });
+      }
     }
+  };
+
+  const handleToastClose = () => {
+    setToast({ show: false, message: "", status: "" });
   };
 
   return (
@@ -115,6 +135,12 @@ const PropertyDetail = () => {
           </div>
         </div>
       </div>
+      <Toast
+        message={toast.message}
+        status={toast.status}
+        isVisible={toast.show}
+        onClose={handleToastClose}
+      />
       <Note />
       <Footer />
     </div>
