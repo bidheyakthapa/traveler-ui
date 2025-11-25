@@ -1,4 +1,5 @@
 import propertyData from "../property.json";
+import { CiFilter } from "react-icons/ci";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Note from "../components/Note";
@@ -40,6 +41,8 @@ const Discover = () => {
   const navigate = useNavigate();
 
   const setProperty = usePropertyDetails((store) => store.setPropertyDetails);
+
+  const [viewFilter, setViewFilter] = useState(false);
 
   const handleFilterChange = (category, filterId, isChecked) => {
     setSelectedFilters((prev) => {
@@ -91,8 +94,15 @@ const Discover = () => {
   return (
     <div>
       <Nav />
-      <div className="flex gap-4 mt-16">
-        <div className="">
+      <button
+        className="md:hidden mb-2 px-4 py-2 bg-blue-500 text-white rounded font-medium cursor-pointer flex items-center justify-start"
+        onClick={() => setViewFilter(true)}
+      >
+        <CiFilter />
+      </button>
+
+      <div className="flex gap-4 md:mt-16">
+        <div className="hidden md:block">
           <h1 className="font-semibold pl-2 mb-4">Filter By</h1>
           <FilterList
             title={"Your budget per day"}
@@ -121,6 +131,50 @@ const Discover = () => {
             }
           />
         </div>
+        {viewFilter && (
+          <div className="fixed top-0 left-0 right-0 bottom-0 bg-white z-50 p-4 md:hidden overflow-y-auto shadow-lg">
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="font-semibold text-lg">Filters</h1>
+              <button
+                onClick={() => setViewFilter(false)}
+                className="text-3xl text-gray-600 cursor-pointer"
+              >
+                &times;
+              </button>
+            </div>
+
+            <FilterList
+              title={"Your budget per day"}
+              data={budgetFilterList}
+              onFilterChange={(filterId, isChecked) =>
+                handleFilterChange("budget", filterId, isChecked)
+              }
+            />
+
+            <RatingFilter
+              onFilterChange={(filterId) =>
+                handleFilterChange("rating", filterId, true)
+              }
+            />
+
+            <FilterList
+              title={"Popular Filters"}
+              data={popularFilterList}
+              onFilterChange={(filterId, isChecked) =>
+                handleFilterChange("popular", filterId, isChecked)
+              }
+            />
+
+            <FilterList
+              title={"Activities"}
+              data={activitiesFilterList}
+              onFilterChange={(filterId, isChecked) =>
+                handleFilterChange("activity", filterId, isChecked)
+              }
+            />
+          </div>
+        )}
+
         <div>
           {filteredProperties.length > 0 ? (
             filteredProperties.map((d) => (

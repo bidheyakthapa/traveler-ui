@@ -13,7 +13,9 @@ const Home = () => {
     <div>
       <Nav />
       <Hero />
-      <Note />
+      <div className="mt-16">
+        <Note />
+      </div>
       <Destinations />
       <Blog />
       <PopularHotels />

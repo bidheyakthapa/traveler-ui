@@ -4,6 +4,7 @@ import ItemCard from "../components/ItemCard";
 import useFavoritesStore from "../favStore";
 import { useNavigate } from "react-router-dom";
 import usePropertyDetails from "../store";
+import Note from "../components/Note";
 
 const Favorites = () => {
   const favorites = useFavoritesStore((state) => state.favorites);
@@ -31,6 +32,7 @@ const Favorites = () => {
           </p>
         )}
       </div>
+      <Note />
       <Footer />
     </div>
   );

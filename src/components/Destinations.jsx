@@ -30,12 +30,14 @@ const data = [
 const Destinations = () => {
   return (
     <div className="mt-8">
-      <h1 className="text-2xl font-bold my-4">Enjoy your dream vacation</h1>
-      <p className="max-w-1/2 text-sm">
+      <h1 className="text-xl md:text-2xl font-bold my-4">
+        Enjoy your dream vacation
+      </h1>
+      <p className="md:max-w-1/2 text-xs md:text-sm">
         Plan and book our perfect trip with expert advice, travel tips,
         destination information and inspiration from us
       </p>
-      <div className="flex gap-4 mt-6">
+      <div className="flex flex-col md:flex-row gap-4 mt-6">
         {data &&
           data.map((i) => (
             <Property img={i.img} title={i.title} properties={i.properties} />

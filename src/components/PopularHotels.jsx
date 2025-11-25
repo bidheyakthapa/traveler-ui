@@ -31,7 +31,7 @@ const PopularHotels = () => {
   return (
     <div className="mt-8">
       <h1 className="text-2xl font-bold">Popular Hotels</h1>
-      <div className="flex gap-4 mt-6">
+      <div className="flex flex-col md:flex-row gap-4 mt-6">
         {data ? (
           data.map((i) => (
             <Property img={i.img} title={i.title} properties={i.properties} />

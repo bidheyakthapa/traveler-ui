@@ -1,7 +1,7 @@
 const Card = ({ data }) => {
   return (
     <div
-      className="relative bg-cover bg-center h-60 flex flex-col justify-end mt-8 rounded-lg p-4"
+      className="relative bg-cover bg-center h-60 flex flex-col justify-end mt-2 md:mt-8 rounded-lg p-4"
       style={{ backgroundImage: `url(${data.img})` }}
     >
       <div className="absolute inset-0 bg-black/30 rounded-lg"></div>

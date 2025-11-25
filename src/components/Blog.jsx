@@ -22,7 +22,7 @@ const Blog = () => {
   return (
     <div className="mt-8 font-bold text-2xl">
       <h1>Get inspiration for your next trip</h1>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-2 md:gap-4">
         {data.map((d) => (
           <Card data={d} />
         ))}
